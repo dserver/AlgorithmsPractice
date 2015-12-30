@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,6 +36,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Problems\Sorting\HeapPQ\Solution\ArrayHeapPQ.cs" />
+    <Compile Include="Problems\Sorting\HeapPQ\UnitTests\SimpleMaxPQTests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Problems\Sorting\InsertionSort\BlankSolution\InsertSort.cs" />
@@ -43,17 +45,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Problems\" />
-    <Folder Include="Problems\Sorting\" />
-    <Folder Include="Problems\Sorting\InsertionSort\" />
-    <Folder Include="Problems\Sorting\QuickSort\" />
-    <Folder Include="Problems\Sorting\MergeSort\" />
     <Folder Include="Problems\Sorting\ArrayPQ\" />
-    <Folder Include="Problems\Sorting\HeapPQ\" />
-    <Folder Include="Problems\Sorting\InsertionSort\BlankSolution\" />
-    <Folder Include="Problems\Sorting\InsertionSort\Solution\" />
-    <Folder Include="Problems\Sorting\InsertionSort\UnitTests\" />
     <Folder Include="Problems\Sorting\FindDuplicates\" />
+    <Folder Include="Problems\Sorting\InsertionSort\Solution\" />
+    <Folder Include="Problems\Sorting\MergeSort\" />
+    <Folder Include="Problems\Sorting\QuickSort\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
