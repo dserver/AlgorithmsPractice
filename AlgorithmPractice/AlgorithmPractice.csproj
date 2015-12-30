@@ -37,4 +37,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Problems\" />
+    <Folder Include="Problems\Sorting\" />
+    <Folder Include="Problems\Sorting\InsertionSort\" />
+    <Folder Include="Problems\Sorting\QuickSort\" />
+    <Folder Include="Problems\Sorting\MergeSort\" />
+    <Folder Include="Problems\Sorting\ArrayPQ\" />
+    <Folder Include="Problems\Sorting\HeapPQ\" />
+    <Folder Include="Problems\Sorting\InsertionSort\BlankSolution\" />
+    <Folder Include="Problems\Sorting\InsertionSort\Solution\" />
+    <Folder Include="Problems\Sorting\InsertionSort\UnitTests\" />
+    <Folder Include="Problems\Sorting\FindDuplicates\" />
+  </ItemGroup>
 </Project>
