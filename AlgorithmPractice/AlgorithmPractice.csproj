@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -51,5 +54,8 @@
     <Folder Include="Problems\Sorting\InsertionSort\Solution\" />
     <Folder Include="Problems\Sorting\InsertionSort\UnitTests\" />
     <Folder Include="Problems\Sorting\FindDuplicates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
