@@ -1,5 +1,6 @@
 ﻿// // Author: Jonathan Henk
 using System;
+using Xunit;
 
 namespace UnitTests
 {
@@ -7,6 +8,7 @@ namespace UnitTests
 	{
 		public InsertSortTest ()
 		{
+			
 		}
 	}
 }
