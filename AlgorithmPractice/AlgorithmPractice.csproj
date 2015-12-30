@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{19EE485E-5875-49A5-976C-49FF5B2BF350}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>AlgorithmPractice</RootNamespace>
     <AssemblyName>AlgorithmPractice</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -29,6 +29,9 @@
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
@@ -36,6 +39,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Problems\Arrays\DynamicArray\Solution\DynamicArray.cs" />
+    <Compile Include="Problems\Arrays\DynamicArray\UnitTests\DynamicArrayTests.cs" />
     <Compile Include="Problems\Sorting\HeapPQ\Solution\ArrayHeapPQ.cs" />
     <Compile Include="Problems\Sorting\HeapPQ\UnitTests\SimpleMaxPQTests.cs" />
     <Compile Include="Program.cs" />
