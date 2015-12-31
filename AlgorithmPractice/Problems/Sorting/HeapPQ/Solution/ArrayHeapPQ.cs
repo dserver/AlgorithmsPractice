@@ -14,11 +14,13 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
     class SimpleMaxPQ
     {
         private int max_capacity; // this should be set to the max N items you want
+        private int insert_point; // place where new elements are added to the array/PQ
 
         // create PQ with initial capacity max
         public SimpleMaxPQ(int max)
         {
             max_capacity = max;
+            insert_point = 0;
         }
 
         // create PQ from array A
@@ -42,7 +44,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
         // return and remove smallest item in PQ
         public int delMin()
         {
-            return 0;
+            
         }
 
         // check if PQ has any items in it.
@@ -54,7 +56,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
         // return number of items in the PQ
         public int size()
         {
-            return 0;
+            return insert_point;
         }
     }
 }
