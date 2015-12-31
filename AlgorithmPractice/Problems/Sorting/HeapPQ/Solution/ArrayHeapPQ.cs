@@ -98,6 +98,16 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
             
         }
 
+        
+        private void bubbleUp(int k)
+        {
+            while (k > 0 && pq[k/2] > pq[k])
+            {
+                swap(k, k / 2);
+                k = k / 2;
+            }
+        }
+
         public void swap(int i, int k)
         {
             int temp = pq[i];
