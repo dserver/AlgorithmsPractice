@@ -37,12 +37,6 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
 
         }
 
-        // return max item in PQ.
-        public int max()
-        {
-            return 0;
-        }
-
         // return and remove smallest item in PQ
         public int delMin()
         {
@@ -89,9 +83,13 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
 
             return;
             
+        }
 
-            
-
+        public void swap(int i, int k)
+        {
+            int temp = pq[i];
+            pq[i] = pq[k];
+            pq[k] = temp;
         }
 
         // check if PQ has any items in it.
