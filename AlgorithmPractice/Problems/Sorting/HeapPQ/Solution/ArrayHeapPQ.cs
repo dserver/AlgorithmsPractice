@@ -10,9 +10,10 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
     {
     }
 
+    // Returns the max N items
     class SimpleMaxPQ
     {
-        private int max_capacity;
+        private int max_capacity; // this should be set to the max N items you want
 
         // create PQ with initial capacity max
         public SimpleMaxPQ(int max)
@@ -38,8 +39,8 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
             return 0;
         }
 
-        // return and remove largest item in PQ
-        public int delMax()
+        // return and remove smallest item in PQ
+        public int delMin()
         {
             return 0;
         }
