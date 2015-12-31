@@ -15,12 +15,14 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
     {
         private int max_capacity; // this should be set to the max N items you want
         private int insert_point; // place where new elements are added to the array/PQ
+        private int[] pq; // the heap structure
 
         // create PQ with initial capacity max
         public SimpleMaxPQ(int max)
         {
             max_capacity = max;
             insert_point = 0;
+            pq = new int[max_capacity];
         }
 
         // create PQ from array A
@@ -44,7 +46,14 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
         // return and remove smallest item in PQ
         public int delMin()
         {
-            
+            if (size() == 0)
+                throw new Exception("Cannot delete minimum if PQ is empty");
+
+            int min = pq[0]; // save minimum so we can return it
+            pq[0] = pq[--insert_point]; // replace top with last child node
+            sink(0); // place new root in correct position
+
+            return min; // return old minimum value
         }
 
         // check if PQ has any items in it.
