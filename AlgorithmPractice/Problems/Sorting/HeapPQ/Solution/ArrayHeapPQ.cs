@@ -75,7 +75,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
                 }
                 else if (2 * k + 2 <= size()) // does k have another child?
                 {
-                    if (pq[k] > pq[2 * k + 1])
+                    if (pq[k] > pq[2 * k + 1]) // and is k greater than that child?
                     {
                         swap(k, 2 * k + 2); // then swap it
                         k = 2 * k + 2;
