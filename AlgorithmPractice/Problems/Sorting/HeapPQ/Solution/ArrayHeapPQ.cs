@@ -56,6 +56,44 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
             return min; // return old minimum value
         }
 
+        private void sink(int k)
+        {
+            // sanity check
+            if (k > size())
+                throw new Exception("Cannot sink a value outside of bounds. Most likely caller is incorrect");
+
+            while (true)
+            {
+                if (2 * k + 1 > size())
+                    break; // pq[k] is in final position since it has no children
+
+                int child1 = pq[2 * k + 1];
+                if (pq[k] > child1) // is k greater than its first child?
+                {
+                    swap(k, 2 * k + 1); // then swap it
+                    k = 2 * k + 1;
+                }
+                else if (2 * k + 2 <= size()) // does k have another child?
+                {
+                    if (pq[k] > pq[2 * k + 1])
+                    {
+                        swap(k, 2 * k + 2); // then swap it
+                        k = 2 * k + 2;
+                    }
+                    else
+                        break;
+                }
+                else
+                    break;
+            }
+
+            return;
+            
+
+            
+
+        }
+
         // check if PQ has any items in it.
         public bool isEmpty()
         {
