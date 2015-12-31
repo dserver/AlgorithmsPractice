@@ -34,6 +34,19 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
         // insert key into the PQ
         public void insert(int key)
         {
+            if (insert_point < max_capacity) // if the heap still has room just add at first space
+            {
+                pq[insert_point] = key;
+                bubbleUp(insert_point);
+            }
+            else
+            {
+                if (pq[0] < key) // replace minimum element
+                {
+                    pq[0] = key;
+                    sink(0); // put root in correct position after replacement
+                }
+            }
 
         }
 
