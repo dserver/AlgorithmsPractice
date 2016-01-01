@@ -40,6 +40,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
             {
                 pq[insert_point] = key;
                 bubbleUp(insert_point);
+                insert_point++;
             }
             else
             {

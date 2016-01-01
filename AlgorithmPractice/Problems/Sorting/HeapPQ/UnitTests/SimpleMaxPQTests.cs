@@ -26,6 +26,15 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.UnitTests
             int c = 5;
             for (int j = 0; j < a.Length; j++)
                 a[j] = c--;
+
+            SimpleMaxPQ m = new SimpleMaxPQ(6);
+            for (int j = 0; j < a.Length; j++)
+            {
+                m.insert(a[j]);
+                int min = m.min();
+                Assert.IsTrue(a[j] == min, "Minimum value was incorrect");
+            }
+
         }
     }
 }
