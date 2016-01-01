@@ -70,15 +70,15 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.UnitTests
         public void size_insertAndDelItems_trueIfSizeIsRight()
         {
             SimpleMaxPQ m = new SimpleMaxPQ(10);
-            for (int i = 1; i <= 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Assert.IsTrue(m.size() == i, "Size function not working properly");
                 m.insert(i);
             }
 
-            for (int i=10; i >= 0; i--)
+            for (int i=10; i > 0; i--)
             {
-                Assert.IsTrue(m.size() == i, "Size function after deleting not working correctly");
+                Assert.AreEqual(i, m.size(), "Size function after deleting not working correctly.");
                 m.delMin();
             }
         }
