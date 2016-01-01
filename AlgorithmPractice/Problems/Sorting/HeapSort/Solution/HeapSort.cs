@@ -11,7 +11,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapSort.Solution
         int[] pq;
         int fake_length;
 
-        public void sort(int[] a)
+        public void sort(ref int[] a)
         {
             this.pq = a; // add reference so other functions can use
             this.fake_length = a.Length - 1;
