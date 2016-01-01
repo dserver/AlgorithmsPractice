@@ -24,7 +24,10 @@ namespace AlgorithmPractice.Problems.Sorting.HeapSort.Solution
 
             // z now is first heap that needs to be heapified.
             int ip = a.Length - 1; // points so position where we swap root node to.
-            for (int i=0; i < a.Length; i++)
+            for (int i = z; i > 0; i--)
+                sink(i);
+
+            for (int i = 0; i < a.Length; i++)
             {
                 swap(0, ip); // put top node in last position
                 fake_length--; // "remove" last element
