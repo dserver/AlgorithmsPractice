@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
 {
-    class ArrayHeapPQ
-    {
-    }
 
     // Returns the max N items
     class SimpleMaxPQ
@@ -28,7 +25,12 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
         // create PQ from array A
         public SimpleMaxPQ(int[] a)
         {
+            max_capacity = a.Length;
+            insert_point = 0;
+            pq = new int[max_capacity];
 
+            for (int j = 0; j < a.Length; j++)
+                insert(a[j]);
         }
 
         // insert key into the PQ
