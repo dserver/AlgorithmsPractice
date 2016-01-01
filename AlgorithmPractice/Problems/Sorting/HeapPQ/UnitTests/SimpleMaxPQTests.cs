@@ -49,7 +49,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.UnitTests
             for (int i = 0; i < b.Length; i++)
             {
                 int t = m.delMin();
-                Assert.IsTrue(t == b[i], "Items didn't come off heap in sorted order. Expected " + Convert.ToString(b[i]) + " but was " + Convert.ToString(t));
+                Assert.AreEqual(b[i], t, "Test sorted order not working");
             }
 
 

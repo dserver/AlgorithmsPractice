@@ -100,15 +100,15 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
                 }
                 else // there are two children, we need to check both
                 {
-                    if (pq[2 * k + 1] > pq[2 * k + 2] && pq[k] > pq[2 * k + 1])
-                    {
-                        swap(k, 2 * k + 1); // then swap it
-                        k = 2 * k + 1; // continue looping.
-                    }
-                    else if (pq[2 * k + 1] < pq[2 * k + 2] && pq[k] > pq[2 * k + 2])
+                    if (pq[2 * k + 1] > pq[2 * k + 2] && pq[k] > pq[2 * k + 2])
                     {
                         swap(k, 2 * k + 2); // then swap it
                         k = 2 * k + 2; // continue looping.
+                    }
+                    else if (pq[2 * k + 1] < pq[2 * k + 2] && pq[k] > pq[2 * k + 1])
+                    {
+                        swap(k, 2 * k + 1); // then swap it
+                        k = 2 * k + 1; // continue looping.
                     }
                     else
                         return;
