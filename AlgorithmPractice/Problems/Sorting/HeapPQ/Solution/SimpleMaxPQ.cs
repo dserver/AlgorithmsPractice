@@ -52,6 +52,14 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
 
         }
 
+        public int min()
+        {
+            if (size() == 0)
+                throw new Exception("PQ is empty. No min to return");
+
+            return pq[0];
+        }
+
         // return and remove smallest item in PQ
         public int delMin()
         {
