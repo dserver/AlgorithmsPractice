@@ -82,30 +82,38 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
 
             while (true)
             {
-                if (2 * k + 1 > size())
-                    break; // pq[k] is in final position since it has no children
 
-                int child1 = pq[2 * k + 1];
-                if (pq[k] > child1) // is k greater than its first child?
+                // check for no child
+                if (2 * k + 1 >= size())
+                    return;
+
+                // check for only 1 child
+                if (2 * k + 2 >= size())
                 {
-                    swap(k, 2 * k + 1); // then swap it
-                    k = 2 * k + 1;
-                }
-                else if (2 * k + 2 <= size()) // does k have another child?
-                {
-                    if (pq[k] > pq[2 * k + 2]) // and is k greater than that child?
+                    if (pq[k] > pq[2 * k + 1]) // is element greater than that one child?
                     {
-                        swap(k, 2 * k + 2); // then swap it
-                        k = 2 * k + 2;
+                        swap(k, 2 * k + 1); // then swap it
+                        k = 2 * k + 1; // continue looping.
                     }
                     else
-                        break;
+                        return; // element is in final position
                 }
-                else
-                    break;
+                else // there are two children, we need to check both
+                {
+                    if (pq[2 * k + 1] > pq[2 * k + 2] && pq[k] > pq[2 * k + 1])
+                    {
+                        swap(k, 2 * k + 1); // then swap it
+                        k = 2 * k + 1; // continue looping.
+                    }
+                    else if (pq[2 * k + 1] < pq[2 * k + 2] && pq[k] > pq[2 * k + 2])
+                    {
+                        swap(k, 2 * k + 2); // then swap it
+                        k = 2 * k + 2; // continue looping.
+                    }
+                    else
+                        return;
+                }
             }
-
-            return;
             
         }
 
