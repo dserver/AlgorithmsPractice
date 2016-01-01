@@ -36,5 +36,23 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.UnitTests
             }
 
         }
+
+        [Test]
+        public void delMin_testSortedOrderTenItems_trueIfSorted()
+        {
+            int[] a = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            SimpleMaxPQ m = new SimpleMaxPQ(10);
+            for (int i = 0; i < a.Length; i++)
+                m.insert(a[i]);
+
+            for (int i = 0; i < b.Length; i++)
+            {
+                int t = m.delMin();
+                Assert.IsTrue(t == b[i], "Items didn't come off heap in sorted order. Expected " + Convert.ToString(b[i]) + " but was " + Convert.ToString(t));
+            }
+
+
+        }
     }
 }
