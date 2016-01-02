@@ -30,10 +30,38 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit-agent-x86">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\nunit-agent-x86.exe</HintPath>
     </Reference>
+    <Reference Include="nunit-console-runner">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit-console-runner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit-console-x86">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\nunit-console-x86.exe</HintPath>
+    </Reference>
+    <Reference Include="nunit-gui-runner">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit-gui-runner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.uiexception">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.uiexception.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.uikit">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.uikit.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Problems\Sorting\HeapPQ\Solution\SimpleMaxPQ.cs" />
@@ -54,6 +82,6 @@
     <Folder Include="Problems\Sorting\QuickSort\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
 </Project>

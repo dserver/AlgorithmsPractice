@@ -11,7 +11,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapSort.Solution
         int[] pq;
         int fake_length;
 
-        public void sort(ref int[] a)
+        public void sort(int[] a)
         {
             this.pq = a; // add reference so other functions can use
             this.fake_length = a.Length - 1;
@@ -24,12 +24,12 @@ namespace AlgorithmPractice.Problems.Sorting.HeapSort.Solution
 
             // z now is first heap that needs to be heapified.
             int ip = a.Length - 1; // points so position where we swap root node to.
-            for (int i = z; i > 0; i--)
+            for (int i = z; i >= 0; i--)
                 sink(i);
 
             for (int i = 0; i < a.Length; i++)
             {
-                swap(0, ip); // put top node in last position
+                swap(0, fake_length); // put top node in last position
                 fake_length--; // "remove" last element
                 sink(0); // put new root node in new position.
 
@@ -42,33 +42,36 @@ namespace AlgorithmPractice.Problems.Sorting.HeapSort.Solution
 
         private void sink(int k)
         {
-            // check for two children.
-            if (2 * k + 2 <= fake_length)
+            while (true)
             {
-                int c1 = 2 * k + 1;
-                int c2 = 2 * k + 2;
-                if (pq[c1] >= pq[c2] && pq[k] <= pq[c1]) // test for swap with first child
+                // check for two children.
+                if (2 * k + 2 <= fake_length)
                 {
-                    swap(c1, k);
-                    k = c1;
+                    int c1 = 2 * k + 1;
+                    int c2 = 2 * k + 2;
+                    if (pq[c1] >= pq[c2] && pq[k] <= pq[c1]) // test for swap with first child
+                    {
+                        swap(c1, k);
+                        k = c1;
+                    }
+                    else if (pq[c2] > pq[c1] && pq[k] <= pq[c2])
+                    {
+                        swap(c2, k);
+                        k = c2;
+                    }
+                    else return;
                 }
-                else if (pq[c2] > pq[c1] && pq[k] <= pq[c2])
+                else if (2 * k + 1 <= fake_length) // check for one child
                 {
-                    swap(c2, k);
-                    k = c2;
+                    if (pq[k] <= pq[2 * k + 1])
+                    {
+                        swap(k, 2 * k + 1);
+                        k = 2 * k + 1;
+                    }
+                    else return;
                 }
-                else return;
+                else return; // no children
             }
-            else if (2 * k + 1 <= fake_length) // check for one child
-            {
-                if (pq[k] <= pq[2 * k + 1])
-                {
-                    swap(k, 2 * k + 1);
-                    k = 2 * k + 1;
-                }
-                else return;
-            }
-            else return; // no children
         }
 
         private void swap(int i, int j)
