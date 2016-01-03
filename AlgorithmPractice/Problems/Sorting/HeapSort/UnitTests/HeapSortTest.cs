@@ -25,5 +25,25 @@ namespace AlgorithmPractice.Problems.Sorting.HeapSort.UnitTests
 
         }
 
+        [Test]
+        public void sort_1000Items_trueIfSorted()
+        {
+            Random r = new Random();
+            HP.HeapSort h = new HP.HeapSort();
+            int[] a = new int[1000];
+            for (int i = 0; i < a.Length; i++)
+                a[i] = r.Next(0, 1000);
+            int[] b = new int[1000];
+            Array.Copy(a, b, 1000);
+            Array.Sort(b);
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                Assert.AreEqual(b[i], a[i], "Sorting 1000 items failed");
+            }
+
+
+        }
+
     }
 }

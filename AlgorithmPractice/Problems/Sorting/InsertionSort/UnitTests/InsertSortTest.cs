@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace UnitTests
 {
-    using AlgorithmPractice.Problems.Sorting.InsertionSort;
+    using AlgorithmPractice.Problems.Sorting.InsertionSort.Solution;
 	[TestFixture]
 	public class InsertSortTest
 	{
@@ -16,7 +16,7 @@ namespace UnitTests
 		[Test]
 		public void testBasicInsertSort()
 		{
-			
+		
 			
 		}
 	}
