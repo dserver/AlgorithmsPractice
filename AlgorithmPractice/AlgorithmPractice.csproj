@@ -70,6 +70,7 @@
     <Compile Include="Problems\Sorting\HeapSort\UnitTests\HeapSortTest.cs" />
     <Compile Include="Problems\Sorting\InsertionSort\Solution\InsertSort.cs" />
     <Compile Include="Problems\Sorting\Interfaces\SortingAlgorithm.cs" />
+    <Compile Include="Problems\Sorting\MergeSort\Solution\MergeSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Problems\Sorting\InsertionSort\BlankSolution\InsertSort.cs" />
@@ -79,7 +80,6 @@
   <ItemGroup>
     <Folder Include="Problems\Sorting\ArrayPQ\" />
     <Folder Include="Problems\Sorting\FindDuplicates\" />
-    <Folder Include="Problems\Sorting\MergeSort\" />
     <Folder Include="Problems\Sorting\QuickSort\" />
   </ItemGroup>
   <ItemGroup>
