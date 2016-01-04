@@ -145,5 +145,14 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
         {
             return insert_point;
         }
+
+        public int[] toSortedArray()
+        {
+            int[] r = new int[pq.Length];
+            Array.Copy(pq,
+                r, r.Length);
+            Array.Sort(r);
+            return r;
+        }
     }
 }
