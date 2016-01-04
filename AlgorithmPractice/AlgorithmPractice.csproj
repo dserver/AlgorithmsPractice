@@ -8,6 +8,22 @@
     <RootNamespace>AlgorithmPractice</RootNamespace>
     <AssemblyName>AlgorithmPractice</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Jon\Documents\Visual Studio 2013\Projects\ConsoleApplication5\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,19 +46,61 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <ManifestCertificateThumbprint>68FA2864C4E2B9E6D05B4011BF7F48557A699F73</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AlgorithmPractice_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="C5">
+      <HintPath>..\packages\C5.2.4.5828.26833\lib\net45\C5.dll</HintPath>
     </Reference>
+    <Reference Include="nunit-agent-x86">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\nunit-agent-x86.exe</HintPath>
+    </Reference>
+    <Reference Include="nunit-console-runner">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit-console-runner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit-console-x86">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\nunit-console-x86.exe</HintPath>
+    </Reference>
+    <Reference Include="nunit-gui-runner">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit-gui-runner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.uiexception">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.uiexception.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.uikit">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.uikit.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\lib\nunit.util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Problems\Arrays\DynamicArray\Solution\DynamicArray.cs" />
-    <Compile Include="Problems\Arrays\DynamicArray\UnitTests\DynamicArrayTests.cs" />
-    <Compile Include="Problems\Sorting\HeapPQ\Solution\ArrayHeapPQ.cs" />
+    <Compile Include="Problems\Sorting\HeapPQ\Solution\SimpleMaxPQ.cs" />
     <Compile Include="Problems\Sorting\HeapPQ\UnitTests\SimpleMaxPQTests.cs" />
+    <Compile Include="Problems\Sorting\HeapSort\Solution\HeapSort.cs" />
+    <Compile Include="Problems\Sorting\HeapSort\UnitTests\HeapSortTest.cs" />
+    <Compile Include="Problems\Sorting\InsertionSort\Solution\InsertSort.cs" />
+    <Compile Include="Problems\Sorting\MergeSort\Solution\MergeSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Problems\Sorting\InsertionSort\BlankSolution\InsertSort.cs" />
@@ -52,11 +110,31 @@
   <ItemGroup>
     <Folder Include="Problems\Sorting\ArrayPQ\" />
     <Folder Include="Problems\Sorting\FindDuplicates\" />
-    <Folder Include="Problems\Sorting\InsertionSort\Solution\" />
-    <Folder Include="Problems\Sorting\MergeSort\" />
+    <Folder Include="Problems\Sorting\Interfaces\" />
     <Folder Include="Problems\Sorting\QuickSort\" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AlgorithmPractice_TemporaryKey.pfx" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
 </Project>
