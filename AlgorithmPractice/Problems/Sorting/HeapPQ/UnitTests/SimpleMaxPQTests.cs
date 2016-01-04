@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using AlgorithmPractice.Problems.Sorting.HeapPQ.Solution;
+using C5;
 
 namespace AlgorithmPractice.Problems.Sorting.HeapPQ.UnitTests
 {
@@ -80,6 +81,31 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.UnitTests
             {
                 Assert.AreEqual(i, m.size(), "Size function after deleting not working correctly.");
                 m.delMin();
+            }
+        }
+
+        [Test]
+        public void delMax_insertManyRandom_TrueIfC5PQreturnsSame()
+        {
+            IntervalHeap<int> correct_pq = new IntervalHeap<int>();
+            SimpleMaxPQ my_pq = new SimpleMaxPQ(10);
+
+            Random r = new Random();
+            for (int i=0; i < 1000; i++)
+            {
+                int n = r.Next(0, 100000);
+                correct_pq.Add(n);
+                my_pq.insert(n);
+            }
+
+            int[] correct_sorted = correct_pq.ToArray();
+            Array.Sort(correct_sorted);
+            int[] mine = my_pq.toSortedArray();
+            
+
+            for (int i=990; i < 1000; i++)
+            {
+                Assert.AreEqual(correct_sorted[i], mine[i - 990]);
             }
         }
 
