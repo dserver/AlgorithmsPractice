@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AlgorithmPractice.Problems.Sorting.Interfaces;
+using AlgorithmPractice.Problems.Sorting;
 
 namespace AlgorithmPractice.Problems.Sorting.InsertionSort.Solution
 {
-    class InsertSort : SortingAlgorithm
+    class InsertSort
     {
 
         public void sort(int[] a)

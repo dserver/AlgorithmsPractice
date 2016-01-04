@@ -30,6 +30,9 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C5">
+      <HintPath>..\packages\C5.2.4.5828.26833\lib\net45\C5.dll</HintPath>
+    </Reference>
     <Reference Include="nunit-agent-x86">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\NUnit 2.6.3\bin\nunit-agent-x86.exe</HintPath>
     </Reference>
@@ -69,7 +72,6 @@
     <Compile Include="Problems\Sorting\HeapSort\Solution\HeapSort.cs" />
     <Compile Include="Problems\Sorting\HeapSort\UnitTests\HeapSortTest.cs" />
     <Compile Include="Problems\Sorting\InsertionSort\Solution\InsertSort.cs" />
-    <Compile Include="Problems\Sorting\Interfaces\SortingAlgorithm.cs" />
     <Compile Include="Problems\Sorting\MergeSort\Solution\MergeSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,9 +82,13 @@
   <ItemGroup>
     <Folder Include="Problems\Sorting\ArrayPQ\" />
     <Folder Include="Problems\Sorting\FindDuplicates\" />
+    <Folder Include="Problems\Sorting\Interfaces\" />
     <Folder Include="Problems\Sorting\QuickSort\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
