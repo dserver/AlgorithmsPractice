@@ -8,7 +8,7 @@ namespace AlgorithmPractice.Problems.Sorting.HeapPQ.Solution
 {
 
     // Returns the max N items
-    class SimpleMaxPQ
+    public class SimpleMaxPQ
     {
         private int max_capacity; // this should be set to the max N items you want
         private int insert_point; // place where new elements are added to the array/PQ
